@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            double number1 = Math.Pow(Math.Sqrt(2), Math.Sqrt(3));
+            double number2 = Math.Pow(Math.Sqrt(3), Math.Sqrt(2));
+
+            string result1 = "Pierwiastek 2 stopnia z 2 do potęgi pierwiastka 2 stopnia z 3 jest większy od pierwiastka 2 stopnia z 3 do potęgi pierwiastka 2 stopnia z 2";
+            string result2 = "Pierwiastek 2 stopnia z 3 do potęgi pierwiastka 2 stopnia z 2  jest większy od pierwiastka 2 stopnia z 2 do potęgi pierwiastka 2 stopnia z 3";
+
+            Console.WriteLine(number1 > number2 ? result1 : result2);
+
+            Console.ReadKey();
+
+        }
+    }
+}
