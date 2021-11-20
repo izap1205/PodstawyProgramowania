@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            start:
+            int a, b;
+            Console.WriteLine("Podaj a");
+            a = int.Parse(Console.ReadLine());
+            b = int.Parse(Console.ReadLine());
+
+            if(a >= 0 && b >= 0)
+            {
+                Console.WriteLine("Wybierz operację");
+                Console.WriteLine("'*' - mnożenie" + "        " + "'/' - dzielenie");
+                Console.WriteLine("'+' - dodawanie" + "       " + "'-' - odejmowanie");
+                Console.WriteLine("'^' - potęgowanie" + "     " + "'%' - dzielenie modulo");
+
+                char operation;
+                operation = char.Parse(Console.ReadLine());
+
+                double a2 = a;
+                double b2 = b;
+
+                switch(operation)
+                {
+                    case '*':
+                        Console.WriteLine(a2 * b2);
+                        break;
+                    case '/':
+                        Console.WriteLine(a2 / b2);
+                        break;
+                    case '+':
+                        Console.WriteLine(a2 + b2);
+                        break;
+                    case '-':
+                        Console.WriteLine(a2 - b2);
+                        break;
+                    case '^':
+                        Console.WriteLine(a2 * b2);
+                        break;
+                    case '%':
+                        Console.WriteLine(a2 / b2);
+                        break;
+                }
+
+            } else
+            {
+                Console.WriteLine("Musisz podać liczby dodatnie!");
+                goto start;
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
