@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            start:
+
+            int a;
+            int sum = 0;
+
+            Console.WriteLine("Wpisz liczbę od 0 do 999");
+            a = int.Parse(Console.ReadLine());
+
+            if(a >= 0 && a <= 999)
+            {
+
+                while (a > 0)
+                {
+                    sum += a % 10;
+                    a /= 10;
+                }
+
+                if (sum % 3 == 0)
+                {
+                    Console.WriteLine("Liczba jest podzielna przez 3");
+                }
+                else
+                {
+                    Console.WriteLine("Liczba nie jest podzielna przez 3");
+                }
+
+            } else
+            {
+                Console.WriteLine("Liczba nie należy do zbioru liczb 0 - 999");
+                goto start;
+            }
+
+            
+            Console.ReadKey();
+        }
+    }
+}
