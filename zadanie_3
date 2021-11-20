@@ -1,0 +1,33 @@
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            double a, b, c;
+            Console.WriteLine("Podaj 3 liczby");
+            a = double.Parse(Console.ReadLine());
+            b = double.Parse(Console.ReadLine());
+            c = double.Parse(Console.ReadLine());
+
+            if ((a < b && a > c) || (a > b && a < c))
+            {
+                Console.WriteLine(a + " jest środkową liczbą");
+            } else if ((b < a && b > c) || (b > a && b < c))
+            {
+                Console.WriteLine(b + " jest środkową liczbą");
+            } else
+            {
+                Console.WriteLine(c + " jest środkową liczbą");
+            }
+
+            Console.ReadKey();
+
+        }
+    }
+}
