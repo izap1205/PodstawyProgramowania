@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+
+        static void BubbleSort(double[] arr)
+        {
+
+            int length = arr.Length;
+
+            for (int i = 0; i < length - 1; i++)
+            {
+                for (int j = 0; j < length - i - 1; j++)
+                {
+                    if (arr[j] > arr[j + 1])
+                    {
+                        double temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+
+        }
+        static void Main(string[] args)
+        {
+            start:
+
+            double a, b, c;
+
+            Console.WriteLine("Podaj trzy różne liczby");
+            a = double.Parse(Console.ReadLine());
+            b = double.Parse(Console.ReadLine());
+            c = double.Parse(Console.ReadLine());
+
+            if(a != b && a != c && b != c)
+            {
+                double[] numbers = {a, b, c};
+
+                BubbleSort(numbers);
+                for(int i = 0; i < 3; i++)
+                {
+                    Console.Write(numbers[i] + " ");
+                }
+
+            } else
+            {
+                Console.WriteLine("Podaj trzy różne liczby");
+                goto start;
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
