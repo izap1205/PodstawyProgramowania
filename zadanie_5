@@ -44,10 +44,10 @@ namespace ConsoleApp2
                         Console.WriteLine(a2 - b2);
                         break;
                     case '^':
-                        Console.WriteLine(a2 * b2);
+                        Console.WriteLine(Math.Pow(a2, b2));
                         break;
                     case '%':
-                        Console.WriteLine(a2 / b2);
+                        Console.WriteLine(a2 % b2);
                         break;
                 }
 
